@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">AppMOBV</string>
     <string name="fill_wine_glass">Fill wine glass</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="form_title">Zadajte údaje</string>
+    <string name="name_input">Zadajte meno</string>
+    <string name="business_name_input">Zadajte názov podniku</string>
+    <string name="business_latitude_input">Zadajte zem. šírku podniku</string>
+    <string name="business_altitude_input">Zadajte zem. dĺžku podniku</string>
+    <string name="confirm">Potvrdiť</string>
 </resources>
