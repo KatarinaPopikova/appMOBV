@@ -1,6 +1,9 @@
 package sk.stu.fei.appmobv
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -17,12 +20,12 @@ class BusinessFragment : Fragment() {
 
     companion object {
         const val NAME_INPUT = "name_input"
-        const val BUSINESS_NAME_INPUT = "businessNameInput"
-        const val BUSINESS_LATITUDE_INPUT = "businessLatitudeInput"
-        const val BUSINESS_ALTITUDE_INPUT = "businessAltitudeInput"
+        const val BUSINESS_NAME_INPUT = "business_name_input"
+        const val BUSINESS_LATITUDE_INPUT = "business_latitude_input"
+        const val BUSINESS_ALTITUDE_INPUT = "business_altitude_input"
 
 
-        const val SEARCH_PREFIX = "https://www.google.com/search?q="
+        const val GEO_PREFIX = "geo:"
 
     }
 
@@ -58,10 +61,19 @@ class BusinessFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        binding.name.text = nameInput
+        binding.businessTitle.text = businessNameInput
         drinkLottie = binding.wineAnimation
         binding.startAnimationButton.setOnClickListener {
             drinkLottie.playAnimation()
 
         }
+
+        binding.openGpsButton.setOnClickListener{
+            val mapUrl: Uri = Uri.parse("${GEO_PREFIX}${businessLatitudeInput},${businessAltitudeInput}")
+            val intent = Intent(Intent.ACTION_VIEW, mapUrl)
+            context?.startActivity(intent)
+        }
+
     }
 }

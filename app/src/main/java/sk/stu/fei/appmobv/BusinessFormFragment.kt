@@ -31,10 +31,10 @@ class BusinessFormFragment : Fragment() {
         binding.confirmButton.setOnClickListener {
             val action =
                 BusinessFormFragmentDirections.actionBusinessFormFragmentToBusinessFragment(
-                    nameInput = binding.nameInput.toString(),
-                    businessNameInput = binding.businessNameInput.toString(),
-                    businessLatitudeInput = binding.businessLatitudeInput.toString(),
-                    businessAltitudeInput = binding.businessAltitudeInput.toString()
+                    nameInput = binding.nameInputEditText.text.toString(),
+                    businessNameInput = binding.businessNameInputEditText.text.toString(),
+                    businessLatitudeInput = binding.businessLatitudeInputEditText.text.toString(),
+                    businessAltitudeInput = binding.businessAltitudeInputEditText.text.toString()
                 )
 
             view.findNavController().navigate(action)
