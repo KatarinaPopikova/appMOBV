@@ -1,6 +1,5 @@
 package sk.stu.fei.appmobv.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,7 +12,7 @@ import sk.stu.fei.appmobv.R
 import sk.stu.fei.appmobv.model.Business
 
 class BusinessItemAdapter(
-    private val context: Context, private val businessList: List<Business>
+    private val businessList: List<Business>
 ) : RecyclerView.Adapter<BusinessItemAdapter.BusinessItemViewHolder>() {
 
     class BusinessItemViewHolder(val view: View): RecyclerView.ViewHolder(view) {

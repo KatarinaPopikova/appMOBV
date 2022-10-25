@@ -82,13 +82,11 @@ class BusinessListFragment : Fragment() {
     private fun sortBusinessList() {
         when (sortMode) {
             "asc" -> recyclerView.adapter = BusinessItemAdapter(
-                requireContext(),
                 MainActivity.businessList.sortedBy { it.tags.businessTitle })
             "desc" -> recyclerView.adapter = BusinessItemAdapter(
-                requireContext(),
                 MainActivity.businessList.sortedByDescending { it.tags.businessTitle })
             else -> recyclerView.adapter =
-                BusinessItemAdapter(requireContext(), MainActivity.businessList)
+                BusinessItemAdapter(MainActivity.businessList)
         }
 
     }
