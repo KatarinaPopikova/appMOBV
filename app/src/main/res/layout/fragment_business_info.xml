@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BusinessInfoFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/business_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:minHeight="20dp"
+            android:padding="16dp"
+            android:textSize="30sp"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+
+        <TextView
+            android:id="@+id/business_owner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/business_owner"
+            android:minHeight="20dp"
+            android:padding="16dp"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/business_title" />
+
+        <TextView
+            android:id="@+id/business_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/business_phone"
+            android:minHeight="20dp"
+            android:padding="16dp"
+            android:textSize="30sp"
+            app:layout_constraintTop_toBottomOf="@id/business_owner" />
+
+        <ImageView
+            android:id="@+id/open_web"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/open_web"
+            android:src="@drawable/ic_web"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/business_phone" />
+
+        <ImageView
+            android:id="@+id/open_gps_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="80dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/open_gps"
+            android:src="@drawable/ic_gps"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/business_phone" />
+
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/delete_business"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

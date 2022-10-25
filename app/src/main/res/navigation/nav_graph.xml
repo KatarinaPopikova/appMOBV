@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/businessFormFragment">
+    app:startDestination="@id/businessListFragment">
 
     <fragment
         android:id="@+id/businessFormFragment"
         android:name="sk.stu.fei.appmobv.BusinessFormFragment"
-        android:label="fragment_business_form"
+        android:label="Vytvor podnik"
         tools:layout="@layout/fragment_business_form">
         <action
             android:id="@+id/action_businessFormFragment_to_businessFragment"
@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/businessFragment"
         android:name="sk.stu.fei.appmobv.BusinessFragment"
-        android:label="fragment_business"
+        android:label="Vytvorený podnik"
         tools:layout="@layout/fragment_business">
 
         <argument
@@ -33,5 +33,52 @@
         <argument
             android:name="business_altitude_input"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/businessListFragment"
+        android:name="sk.stu.fei.appmobv.BusinessListFragment"
+        android:label="@string/business_list"
+        tools:layout="@layout/fragment_business_list" >
+        <argument
+            android:name="business_id"
+            app:argType="long"
+            android:defaultValue="-1L" />
+        <action
+            android:id="@+id/action_businessListFragment_to_businessInfoFragment"
+            app:destination="@id/businessInfoFragment" />
+        <action
+            android:id="@+id/action_businessListFragment_to_businessFormFragment"
+            app:destination="@id/businessFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/businessInfoFragment"
+        android:name="sk.stu.fei.appmobv.BusinessInfoFragment"
+        android:label="Konkrétny podnik"
+        tools:layout="@layout/fragment_business_info">
+        <argument
+            android:name="business_title"
+            app:argType="string" />
+        <argument
+            android:name="business_phone"
+            app:argType="string" />
+        <argument
+            android:name="business_owner"
+            app:argType="string" />
+        <argument
+            android:name="business_web"
+            app:argType="string" />
+        <argument
+            android:name="business_long"
+            app:argType="string" />
+        <argument
+            android:name="business_lat"
+            app:argType="string" />
+        <argument
+            android:name="business_id"
+            android:defaultValue="-1L"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_businessInfoFragment_to_businessListFragment"
+            app:destination="@id/businessListFragment" />
     </fragment>
 </navigation>

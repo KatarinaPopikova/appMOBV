@@ -8,10 +8,15 @@
     <string name="business_latitude_input">Zadajte zem. šírku podniku</string>
     <string name="business_altitude_input">Zadajte zem. dĺžku podniku</string>
     <string name="confirm">Potvrdiť</string>
-
-
     <string name="name">Name</string>
     <string name="business_title">Podnik</string>
+    <string name="business_owner">Vlastník</string>
+    <string name="business_phone">Tel. č.</string>
     <string name="fill_wine_glass">Naplň vínový pohár</string>
     <string name="open_gps">Ukáž na mape</string>
+    <string name="business_list">Zoznam podnikov</string>
+    <string name="sort">Zoradiť</string>
+    <string name="add_business">Pridať podnik</string>
+    <string name="open_web">Otvoriť stránku</string>
+    <string name="delete_business">Vymazať podnik</string>
 </resources>
